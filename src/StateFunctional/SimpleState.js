@@ -13,17 +13,22 @@ const SimpleState = (props)=>{
         e.preventDefault();
         setAns(inp);
     }
+    console.log(count);
+    if(count<0){
+        setCount(0);
+    }
     return(
         <div>
             <h1>{inp}</h1>
             <h1>{ans}</h1>
             <div className="d-flex justify-content-center m-4 p-4">
-            {console.log(useState(100))}
+            {/* {console.log(useState(100))} */}
             <input
             type="text" className="form-control w-25" placeholder="Enter Text" 
             onChange={(e)=>handleChange(e)}></input>
             <button onClick={(e)=>showInput(e)} className="mx-4 btn btn-success">Submit</button>
         </div>
+
         <div className="d-flex justify-content-evenly m-4 p-4">
             {/* <h1> Simple State</h1> */}
             <button className="btn btn-danger btn-lg" onClick={()=>setCount(count-1)}>Subtract</button>

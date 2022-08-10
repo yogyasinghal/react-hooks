@@ -1,4 +1,4 @@
-import {useState} from "react"; 
+import {useState,useEffect} from "react"; 
 const SimpleState = (props)=>{
     console.log("hello");
     const [count,setCount] = useState(0);
@@ -8,6 +8,14 @@ const SimpleState = (props)=>{
         e.preventDefault();
         setInp(e.target.value);
     }
+    
+    // useeffect will call only when inp is changed
+    useEffect(()=>{
+        console.log("useefect");
+        // alert("hello");
+        // document.title = `You clicked ${count} times`;
+    },[inp])
+
     const showInput=(e)=>{
         // console.log("btn clicked");
         e.preventDefault();

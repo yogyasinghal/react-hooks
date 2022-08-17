@@ -23,6 +23,8 @@ import ContextProviderEg from './ContextCreation/ContextProviderEg';
 
 import CounterConnector from "./React Redux Setup/CounterConnector"
 
+import GetUserConnector from './component/GetUserConnector';
+
 function App() {
   console.log("app.js");
   return (
@@ -32,7 +34,9 @@ function App() {
       {/* <Parent></Parent> */}
       <NavBar></NavBar>
      <h1>hello function</h1>
-     <CounterConnector></CounterConnector>
+     {/* <CounterConnector></CounterConnector> */}
+     <GetUserConnector></GetUserConnector>
+
      {/* <NavLink 
       to = '/router'
       style={({isActive})=>({color:isActive?'red':'yellow'})}

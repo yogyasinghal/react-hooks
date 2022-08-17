@@ -1,6 +1,8 @@
+// payload is added for thunk middleware
 export function increment(){
     return{
-        type:'INCREMENT'
+        type:'INCREMENT',
+        payload:'send data'
     }
 }
 

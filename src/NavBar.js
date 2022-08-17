@@ -1,5 +1,5 @@
 import React, { Component }  from 'react';
-
+import {Link,NavLink,Route,Routes} from 'react-router-dom'
 const NavBar=()=>{
     return(
         <>
@@ -24,10 +24,60 @@ const NavBar=()=>{
       >
         <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
-            <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+        <NavLink to='/'>
+        {
+            ({isActive})=>(
+                <button className={isActive?'btn btn-none border-0 text-primary':'btn btn-none border-0'}>Home</button>
+            )
+        }
+      </NavLink>
+            {/* <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a> */}
         </li>
         <li className="nav-item">
-            <a className="nav-link" href="#">Link</a>
+        <NavLink to='/formHook'>
+        {
+            ({isActive})=>(
+                <button className={isActive?'btn btn-none border-0 text-primary':'btn btn-none border-0'}>FormHook</button>
+            )
+        }
+      </NavLink>
+            {/* <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a> */}
+        </li>
+        <li className="nav-item">
+        <NavLink to='/fetch'>
+        {
+            ({isActive})=>(
+                <button className={isActive?'btn btn-none border-0 text-primary':'btn btn-none border-0'}>Fetch</button>
+            )
+        }
+      </NavLink>
+            {/* <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a> */}
+        </li>
+        <li className="nav-item">
+        {/* <NavLink to='/image' style={({isActive})=>(
+        {color:isActive?'red':'blue'}
+      )}> Navlink
+
+      </NavLink> */}
+
+<NavLink to='/contactServer'>
+      {
+        ({isActive})=>(
+          <button className={isActive?'btn btn-none text-primary border-0':'btn btn-none border-0'}>ContactManager</button>
+        )
+      }
+      </NavLink>
+
+
+        {/* <Link className='btn btn-none' to='/contactManager'>Contact Manager</Link> */}
+        {/* <NavLink 
+            to = '/router'
+            // style={{backgroundColor:"blue"}}
+            style={isActive => ({color:isActive?'red':'yellow'})}
+            >
+                Go to router
+        </NavLink> */}
+            {/* <a className="nav-link" href="#">Link</a> */}
         </li>
         <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

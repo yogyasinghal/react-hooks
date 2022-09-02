@@ -35,7 +35,7 @@ function App() {
       <NavBar></NavBar>
      <h1>hello function</h1>
      {/* <CounterConnector></CounterConnector> */}
-     <GetUserConnector></GetUserConnector>
+     {/* <GetUserConnector></GetUserConnector> */}
 
      {/* <NavLink 
       to = '/router'
